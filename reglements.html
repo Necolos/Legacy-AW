@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,10 +38,94 @@
         a:hover {
             color: #4752c4;
         }
+
+        .top-nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: flex;
+      gap: 25px;
+      z-index: 10;
+    }
+
+    .top-nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      opacity: 0.85;
+      transition: opacity 0.2s ease, color 0.2s ease;
+    }
+
+    .top-nav a:hover {
+      opacity: 1;
+      color: #ff8c00;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff0000, #ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 35px;
+      color: #cccccc;
+      max-width: 700px;
+    }
+
+    .btn-discord {
+      padding: 15px 40px;
+      background: #5865F2;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 40px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-discord:hover {
+      background: #4752c4;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
     </style>
 </head>
 
 <body>
+
+  <nav class="top-nav">
+    <a href="reglements.html">Règlements</a>
+    <a href="streamer.html">Streamer</a>
+    <a href="staff.html">Équipe staff</a>
+    <a href="boutique.html">Boutique</a>
+  </nav>
+
     <h1>Règlements</h1>
     <ul>
         <h1>Respect et communication</h1>
