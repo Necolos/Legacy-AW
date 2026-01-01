@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LegacyAW FA RP</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("https://cdn.discordapp.com/attachments/1456003602400416008/1456365357852921969/Design_sans_titre_6.png?ex=6958196f&is=6956c7ef&hm=b0923d1d95e24789ba0a1af688f06e972f8c3a6bb49472a633b82e986d67b382&") no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      height: 100vh;
+    }
+
+    /* MENU HAUT DROIT */
+    .top-nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: flex;
+      gap: 25px;
+      z-index: 10;
+    }
+
+    .top-nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      opacity: 0.85;
+      transition: opacity 0.2s ease, color 0.2s ease;
+    }
+
+    .top-nav a:hover {
+      opacity: 1;
+      color: #ff8c00;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff0000, #ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 35px;
+      color: #cccccc;
+      max-width: 700px;
+    }
+
+    .btn-discord {
+      padding: 15px 40px;
+      background: #5865F2;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 40px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-discord:hover {
+      background: #4752c4;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <nav class="top-nav">
+    <a href="reglements.html">Règlements</a>
+    <a href="streamer.html">Streamer</a>
+    <a href="staff.html">Équipe staff</a>
+    <a href="boutique.html">Boutique</a>
+  </nav>
+
+  <div class="container">
+    <h1>Bienvenue sur LegacyAW FA RP</h1>
+
+    <p>
+      Pour en savoir plus, nous t'invitons à rejoindre le discord
+    </p>
+
+    <a href="https://discord.gg/m5zA9YfekB" class="btn-discord" target="_blank">
+      Rejoindre le Discord
+    </a>
+  </div>
+
+  <footer>
+    © 2025 LegacyAW FA RP — Tous droits réservés
+  </footer>
+
+</body>
+
+</html>
