@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,27 +13,44 @@
       padding: 0;
       box-sizing: border-box;
     }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background:
-                linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-                url("https://cdn.discordapp.com/attachments/1456003602400416008/1456365309064777850/Design_sans_titre_7.png?ex=69581963&is=6956c7e3&hm=42d35544ce02a6d2033b30d4b29d88a73e05fbda986533925ddd5b541570c6d1&") no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff;
-            padding: 50px 20px;
-            max-width: 900px;
-            margin: auto;
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("images/accueil.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* MENU HAUT DROIT */
-    .top-nav {
-      position: absolute;
-      top: 20px;
-      right: 30px;
+    /* Conteneur principal */
+    .page {
+      width: 100%;
+      max-width: 1100px;
+      min-height: 100vh;
+      position: relative;
+      padding: 50px 20px;
       display: flex;
-      gap: 25px;
-      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
+
+    /* MENU */
+    .top-nav {
+      position: fixed;
+      top: 25px;
+      right: 40px;
+      display: flex;
+      gap: 30px;
+      z-index: 999;
+    }
+
 
     .top-nav a {
       color: #ffffff;
@@ -42,22 +58,12 @@
       font-size: 0.95rem;
       font-weight: 500;
       opacity: 0.85;
-      transition: opacity 0.2s ease, color 0.2s ease;
+      transition: 0.2s;
     }
 
     .top-nav a:hover {
       opacity: 1;
       color: #ff8c00;
-    }
-
-    .container {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
     }
 
     h1 {
@@ -84,7 +90,7 @@
       font-size: 1.1rem;
       font-weight: 600;
       border-radius: 40px;
-      transition: transform 0.2s ease, background 0.2s ease;
+      transition: 0.2s;
     }
 
     .btn-discord:hover {
@@ -105,17 +111,17 @@
 
 <body>
 
-  <!-- MENU -->
-  <nav class="top-nav">
-    <a href="index.html">Accueil</a>
-    <a href="server.html">Serveur</a>
-    <a href="reglements.html">Règlements</a>
-    <a href="streamer.html">Streamer</a>
-    <a href="staff.html">Équipe staff</a>
-    <a href="boutique.html">Boutique</a>
-  </nav>
+  <div class="page">
 
-  <div class="container">
+    <nav class="top-nav">
+      <a href="index.html">Accueil</a>
+      <a href="server.html">Serveur</a>
+      <a href="reglements.html">Règlements</a>
+      <a href="streamer.html">Streamer</a>
+      <a href="staff.html">Équipe staff</a>
+      <a href="boutique.html">Boutique</a>
+    </nav>
+
     <h1>Bienvenue sur LegacyAW FA RP</h1>
 
     <p>
@@ -125,12 +131,12 @@
     <a href="https://discord.gg/m5zA9YfekB" class="btn-discord" target="_blank">
       Rejoindre le Discord
     </a>
+
+    <footer>
+      © 2025 LegacyAW FA RP — Tous droits réservés
+    </footer>
+
   </div>
 
-  <footer>
-    © 2025 LegacyAW FA RP — Tous droits réservés
-  </footer>
-
 </body>
-
 </html>
