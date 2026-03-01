@@ -1,188 +1,243 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Règlements | LegacyAW FA RP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Règlements | LegacyAW FA Roleplay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      min-height: 100vh;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("images/reglement.png") no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-    }
+body{
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at 70% 30%, #ff8c0055, transparent 60%),
+    linear-gradient(to bottom, #140700, #000);
+  color:#fff3e0;
+  min-height:100vh;
+  overflow-x:hidden;
+}
 
-    /* MENU */
-    .top-nav {
-      position: fixed;
-      top: 25px;
-      right: 40px;
-      display: flex;
-      gap: 30px;
-      z-index: 999;
-    }
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:25px 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(20,5,0,0.75);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ff8c0044;
+  z-index:1000;
+}
 
-    .top-nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      opacity: 0.85;
-      transition: 0.2s;
-    }
+nav .logo{
+  font-size:1.6rem;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#ff8c00;
+}
 
-    .top-nav a:hover {
-      opacity: 1;
-      color: #ff8c00;
-    }
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:40px;
+}
 
-    /* CONTENEUR */
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 120px 25px 80px;
-    }
+nav ul a{
+  text-decoration:none;
+  color:#ffd6a3;
+  font-size:0.9rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:0.3s;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 3.5rem;
-      margin-bottom: 50px;
-      background: linear-gradient(90deg, #ff0000, #ff8c00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+nav ul a:hover{
+  color:#ff8c00;
+}
 
-    .rule-section {
-      margin-bottom: 40px;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 30px;
-      border-radius: 15px;
-      backdrop-filter: blur(6px);
-    }
+/* HERO / CONTENU */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:120px 8% 60px;
+}
 
-    .rule-section h2 {
-      color: #ff8c00;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-    }
+.hero h1{
+  font-size:3rem;
+  margin-bottom:40px;
+  letter-spacing:2px;
+  background: linear-gradient(90deg,#ff8c00,#ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align:center;
+}
 
-    .rule-section ul {
-      padding-left: 20px;
-    }
+/* Sections de règles */
+.rule-section{
+  background: rgba(0,0,0,0.5);
+  padding:30px;
+  margin-bottom:30px;
+  border-radius:15px;
+  backdrop-filter: blur(6px);
+  max-width:800px;
+  width:100%;
+}
 
-    .rule-section li {
-      margin-bottom: 10px;
-      color: #dddddd;
-      line-height: 1.6;
-    }
+.rule-section h2{
+  color:#ff8c00;
+  font-size:1.5rem;
+  margin-bottom:15px;
+}
 
-    .back-home {
-      text-align: center;
-      margin-top: 40px;
-    }
+.rule-section ul{
+  padding-left:20px;
+}
 
-    .back-home a {
-      color: #5865F2;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: 0.2s;
-    }
+.rule-section li{
+  margin-bottom:10px;
+  line-height:1.6;
+  color:#ffddb3;
+}
 
-    .back-home a:hover {
-      opacity: 0.8;
-    }
+/* Bouton retour */
+.back-home{
+  text-align:center;
+  margin-top:40px;
+}
 
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 0.85rem;
-      padding: 30px 0 20px;
-    }
-  </style>
+.back-home a{
+  display:inline-block;
+  padding:12px 35px;
+  background:linear-gradient(135deg,#ff8c00,#ffb347);
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:2px;
+  border-radius:5px;
+  box-shadow:0 0 25px #ff8c0099;
+  transition:0.3s;
+}
+
+.back-home a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 40px #ffb347;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:0.8rem;
+  color:#c17a2b;
+  padding:20px 0;
+  margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero h1{
+    font-size:2.5rem;
+  }
+
+  .rule-section{
+    padding:20px;
+  }
+
+  nav{
+    padding:20px 30px;
+  }
+
+  nav ul{
+    gap:20px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <nav class="top-nav">
+<nav>
+  <div class="logo">LegacyAW</div>
+  <ul>
     <a href="index.html">Accueil</a>
     <a href="server.html">Serveur</a>
     <a href="reglements.html">Règlements</a>
     <a href="streamer.html">Streamer</a>
-    <a href="staff.html">Équipe staff</a>
     <a href="boutique.html">Boutique</a>
-  </nav>
+  </ul>
+</nav>
 
-  <div class="container">
-    <h1>Règlements</h1>
+<section class="hero">
+  <h1>Règlements</h1>
 
-    <div class="rule-section">
-      <h2>Respect et communication</h2>
-      <ul>
-        <li>Respect mutuel : aucun harcèlement, insulte, discrimination ou propos toxique.</li>
-        <li>Langage approprié en jeu et sur Discord.</li>
-        <li>Les conflits doivent être réglés en RP ou via le staff.</li>
-        <li>Spam, flood et publicité interdits.</li>
-      </ul>
-    </div>
-
-    <div class="rule-section">
-      <h2>RolePlay (RP)</h2>
-      <ul>
-        <li>Incarne ton personnage de manière cohérente et réaliste.</li>
-        <li>Interdiction du MetaGaming et du PowerGaming.</li>
-        <li>Pas de Win RP.</li>
-        <li>Les actions violentes doivent être justifiées.</li>
-        <li>Free Kill (FK) et Revenge Kill (RK) interdits.</li>
-      </ul>
-    </div>
-
-    <div class="rule-section">
-      <h2>Véhicules et propriétés</h2>
-      <ul>
-        <li>Conduite réaliste obligatoire.</li>
-        <li>Vol de véhicules uniquement en RP.</li>
-        <li>Respect des maisons, commerces et biens.</li>
-      </ul>
-    </div>
-
-    <div class="rule-section">
-      <h2>Staff</h2>
-      <ul>
-        <li>Respect des décisions du staff.</li>
-        <li>Contestations calmes et structurées.</li>
-        <li>Tout abus ou bug doit être reporté.</li>
-      </ul>
-    </div>
-
-    <div class="rule-section">
-      <h2>Sanctions</h2>
-      <ul>
-        <li>Sanctions progressives selon la gravité.</li>
-        <li>L’accumulation peut mener à un bannissement.</li>
-        <li>Les abus de contestation sont sanctionnables.</li>
-      </ul>
-    </div>
-
-    <div class="back-home">
-      <a href="index.html">← Retour à l'accueil</a>
-    </div>
+  <div class="rule-section">
+    <h2>Respect et communication</h2>
+    <ul>
+      <li>Respect mutuel : aucun harcèlement, insulte, discrimination ou propos toxique.</li>
+      <li>Langage approprié en jeu et sur Discord.</li>
+      <li>Les conflits doivent être réglés en RP ou via le staff.</li>
+      <li>Spam, flood et publicité interdits.</li>
+    </ul>
   </div>
 
-  <footer>
-    © 2025 LegacyAW FA RP — Tous droits réservés
-  </footer>
+  <div class="rule-section">
+    <h2>RolePlay (RP)</h2>
+    <ul>
+      <li>Incarne ton personnage de manière cohérente et réaliste.</li>
+      <li>Interdiction du MetaGaming et du PowerGaming.</li>
+      <li>Pas de Win RP.</li>
+      <li>Les actions violentes doivent être justifiées.</li>
+      <li>Free Kill (FK) et Revenge Kill (RK) interdits.</li>
+    </ul>
+  </div>
+
+  <div class="rule-section">
+    <h2>Véhicules et propriétés</h2>
+    <ul>
+      <li>Conduite réaliste obligatoire.</li>
+      <li>Vol de véhicules uniquement en RP.</li>
+      <li>Respect des maisons, commerces et biens.</li>
+    </ul>
+  </div>
+
+  <div class="rule-section">
+    <h2>Staff</h2>
+    <ul>
+      <li>Respect des décisions du staff.</li>
+      <li>Contestations calmes et structurées.</li>
+      <li>Tout abus ou bug doit être reporté.</li>
+    </ul>
+  </div>
+
+  <div class="rule-section">
+    <h2>Sanctions</h2>
+    <ul>
+      <li>Sanctions progressives selon la gravité.</li>
+      <li>L’accumulation peut mener à un bannissement.</li>
+      <li>Les abus de contestation sont sanctionnables.</li>
+    </ul>
+  </div>
+
+  <div class="back-home">
+    <a href="index.html">← Retour à l'accueil</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 LegacyAW FA Roleplay — Tous droits réservés
+</footer>
 
 </body>
 </html>

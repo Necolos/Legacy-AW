@@ -1,153 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LegacyAW FA</title>
+<meta charset="UTF-8">
+<title>LegacyAW FA Roleplay - Serveur</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      min-height: 100vh;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-        url("images/serveur.png") no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-    }
+body{
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at 70% 30%, #ff8c0055, transparent 60%),
+    linear-gradient(to bottom, #140700, #000);
+  color:#fff3e0;
+  min-height:100vh;
+  overflow-x:hidden;
+}
 
-    /* MENU */
-    .top-nav {
-      position: fixed;
-      top: 25px;
-      right: 40px;
-      display: flex;
-      gap: 30px;
-      z-index: 999;
-    }
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:25px 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(20,5,0,0.75);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ff8c0044;
+  z-index:1000;
+}
 
-    .top-nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      opacity: 0.85;
-      transition: 0.2s;
-    }
+nav .logo{
+  font-size:1.6rem;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#ff8c00;
+}
 
-    .top-nav a:hover {
-      opacity: 1;
-      color: #ff8c00;
-    }
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:40px;
+}
 
-    /* CONTENU */
-    .container {
-      flex: 1;
-      max-width: 1000px;
-      margin: auto;
-      padding: 120px 25px 60px;
-      text-align: center;
-    }
+nav ul a{
+  text-decoration:none;
+  color:#ffd6a3;
+  font-size:0.9rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:0.3s;
+}
 
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 40px;
-      background: linear-gradient(90deg, #ff0000, #ff8c00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+nav ul a:hover{
+  color:#ff8c00;
+}
 
-    p {
-      font-size: 1.15rem;
-      color: #cccccc;
-      line-height: 1.8;
-    }
+/* HERO / CONTENU */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 8%;
+  flex-direction:column;
+  text-align:center;
+}
 
-    /* RETOUR */
-    .back-home {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+.hero h1{
+  font-size:3rem;
+  margin-bottom:20px;
+  letter-spacing:2px;
+  background: linear-gradient(90deg,#ff8c00,#ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    .back-home a {
-      color: #5865F2;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: 0.2s;
-    }
+.hero p{
+  color:#ffb86b;
+  font-size:1.05rem;
+  line-height:1.7;
+  margin-bottom:40px;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
 
-    .back-home a:hover {
-      opacity: 0.85;
-      transform: translateX(-3px);
-    }
+/* BOUTON */
+.btn-main{
+  display:inline-block;
+  padding:16px 55px;
+  background:linear-gradient(135deg,#ff8c00,#ffb347);
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:3px;
+  border-radius:5px;
+  box-shadow:0 0 30px #ff8c0099;
+  transition:0.3s;
+}
 
-    /* FOOTER */
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #777;
-      padding: 20px 0 25px;
-    }
-  </style>
+.btn-main:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 45px #ffb347;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:0.8rem;
+  color:#c17a2b;
+  padding:20px 0;
+  margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero h1{
+    font-size:2.5rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+    padding:0 15px;
+  }
+
+  nav{
+    padding:20px 30px;
+  }
+
+  nav ul{
+    gap:20px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- MENU -->
-  <nav class="top-nav">
+<nav>
+  <div class="logo">LegacyAW</div>
+  <ul>
     <a href="index.html">Accueil</a>
     <a href="server.html">Serveur</a>
     <a href="reglements.html">Règlements</a>
     <a href="streamer.html">Streamer</a>
-    <a href="staff.html">Équipe staff</a>
     <a href="boutique.html">Boutique</a>
-  </nav>
+  </ul>
+</nav>
 
-  <!-- CONTENU -->
-  <div class="container">
-    <h1>LegacyAW FA</h1>
+<section class="hero">
+  <h1>LegacyAW FA Roleplay</h1>
 
-    <p>
-      🔥 <strong>Legacy AW – L’expérience RolePlay nouvelle génération</strong> 🔥<br><br>
-      Bienvenue sur <strong>Legacy AW</strong>, un serveur <strong>FiveM RolePlay</strong> pensé pour offrir une immersion totale,
-      un gameplay fluide et une communauté soudée. Ici, chaque décision compte,
-      chaque action a des conséquences, et chaque joueur écrit sa propre histoire.
-      <br><br>
-      ⚙️ <strong>Un serveur stable et optimisé</strong><br>
-      Une base performante garantissant une expérience fluide, stable et sans lag.
-      <br><br>
-      🎭 <strong>Un RolePlay sérieux et accessible</strong><br>
-      Un staff actif et un environnement équilibré pour des scènes RP de qualité.
-      <br><br>
-      🚓 <strong>Métiers & scripts exclusifs</strong><br>
-      LSPD, EMS, civils, entreprises, gangs et organisations criminelles.
-      <br><br>
-      🌍 <strong>Une ville vivante</strong><br>
-      Une économie et des événements qui évoluent avec la communauté.
-      <br><br>
-      ✨ <strong>Legacy AW</strong>, ce n’est pas qu’un serveur, c’est une aventure.
-    </p>
-  </div>
+  <p>
+    🔥 <strong>L’expérience RolePlay nouvelle génération</strong> 🔥<br><br>
+    Bienvenue sur <strong>Legacy AW</strong>, un serveur <strong>FiveM RolePlay</strong> immersif. Ici, chaque décision compte, chaque action a des conséquences, et chaque joueur écrit sa propre histoire.
+    <br><br>
+    ⚙️ <strong>Serveur stable et optimisé</strong> — Profitez d’une expérience fluide et sans lag.
+    <br><br>
+    🎭 <strong>RolePlay sérieux et accessible</strong> — Staff actif et environnement équilibré pour des scènes RP de qualité.
+    <br><br>
+    🚓 <strong>Métiers & scripts exclusifs</strong> — LSPD, EMS, civils, entreprises, gangs et organisations criminelles.
+    <br><br>
+    🌍 <strong>Une ville vivante</strong> — Économie et événements évoluant avec la communauté.
+    <br><br>
+    ✨ <strong>Legacy AW</strong>, ce n’est pas qu’un serveur, c’est une aventure.
+  </p>
 
-  <div class="back-home">
-    <a href="index.html">← Retour à l'accueil</a>
-  </div>
+  <a href="https://discord.gg/m5zA9YfekB" class="btn-main">REJOINDRE</a>
+</section>
 
-  <footer>
-    © 2025 LegacyAW FA RP — Tous droits réservés
-  </footer>
+<footer>
+  © 2025 LegacyAW FA Roleplay — Tous droits réservés
+</footer>
 
 </body>
 </html>

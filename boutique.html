@@ -1,118 +1,178 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique | LegacyAW FA RP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<title>Boutique | LegacyAW FA Roleplay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-        font-family: 'Poppins', sans-serif;
-        min-height: 100vh;
-        background:
-            linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-            url("images/boutique.png") no-repeat center center fixed;
-        background-size: cover;
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        /* MENU */
-        .top-nav {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            display: flex;
-            gap: 25px;
-            z-index: 10;
-        }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-        .top-nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            opacity: 0.85;
-            transition: opacity 0.2s ease, color 0.2s ease;
-        }
+body{
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at 70% 30%, #ff8c0055, transparent 60%),
+    linear-gradient(to bottom, #140700, #000);
+  color:#fff3e0;
+  min-height:100vh;
+  overflow-x:hidden;
+}
 
-        .top-nav a:hover {
-            opacity: 1;
-            color: #ff8c00;
-        }
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:25px 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(20,5,0,0.75);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ff8c0044;
+  z-index:1000;
+}
 
-        /* CONTENU */
-        .content {
-            text-align: center;
-            max-width: 900px;
-            margin: auto;
-        }
+nav .logo{
+  font-size:1.6rem;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#ff8c00;
+}
 
-        h1 {
-            font-size: 3.2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #ff0000, #ff8c00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:40px;
+}
 
-        p {
-            font-size: 1.2rem;
-            color: #cccccc;
-            margin-bottom: 30px;
-        }
+nav ul a{
+  text-decoration:none;
+  color:#ffd6a3;
+  font-size:0.9rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:0.3s;
+}
 
-        a {
-            color: #5865F2;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
+nav ul a:hover{
+  color:#ff8c00;
+}
 
-        a:hover {
-            color: #4752c4;
-        }
+/* HERO / CONTENU */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:120px 8% 60px;
+  text-align:center;
+}
 
-        footer {
-            position: absolute;
-            bottom: 15px;
-            width: 100%;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #777;
-        }
-    </style>
+.hero h1{
+  font-size:3rem;
+  margin-bottom:20px;
+  letter-spacing:2px;
+  background: linear-gradient(90deg,#ff8c00,#ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p{
+  color:#ffb86b;
+  font-size:1.05rem;
+  line-height:1.7;
+  margin-bottom:40px;
+  max-width:700px;
+}
+
+/* BOUTON RETOUR */
+.back-home{
+  text-align:center;
+  margin-top:30px;
+}
+
+.back-home a{
+  display:inline-block;
+  padding:14px 40px;
+  background:linear-gradient(135deg,#ff8c00,#ffb347);
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:2px;
+  border-radius:5px;
+  box-shadow:0 0 25px #ff8c0099;
+  transition:0.3s;
+}
+
+.back-home a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 40px #ffb347;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:0.8rem;
+  color:#c17a2b;
+  padding:20px 0;
+  margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero h1{
+    font-size:2.5rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+    padding:0 15px;
+  }
+
+  nav{
+    padding:20px 30px;
+  }
+
+  nav ul{
+    gap:20px;
+  }
+}
+</style>
 </head>
 
 <body>
-    <!-- MENU -->
-    <nav class="top-nav">
-        <a href="index.html">Accueil</a>
-        <a href="server.html">Serveur</a>
-        <a href="reglements.html">Règlements</a>
-        <a href="streamer.html">Streamer</a>
-        <a href="staff.html">Équipe staff</a>
-        <a href="boutique.html">Boutique</a>
-    </nav>
 
-    <div class="content">
-        <h1>Boutique</h1>
-        <p>Découvrez nos offres et objets disponibles pour soutenir le serveur(a venir).</p>
-        <p><a href="index.html">← Retour à l'accueil</a></p>
-    </div>
+<nav>
+  <div class="logo">LegacyAW</div>
+  <ul>
+    <a href="index.html">Accueil</a>
+    <a href="server.html">Serveur</a>
+    <a href="reglements.html">Règlements</a>
+    <a href="streamer.html">Streamer</a>
+    <a href="boutique.html">Boutique</a>
+  </ul>
+</nav>
 
-    <footer>
-        © 2025 LegacyAW FA RP — Tous droits réservés
-    </footer>
+<section class="hero">
+  <h1>Boutique</h1>
+  <p>Découvrez nos offres et objets disponibles pour soutenir le serveur (à venir).</p>
+
+  <div class="back-home">
+    <a href="index.html">← Retour à l'accueil</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 LegacyAW FA Roleplay — Tous droits réservés
+</footer>
+
 </body>
-
 </html>

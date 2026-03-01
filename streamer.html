@@ -1,211 +1,274 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Streamer | LegacyAW FA RP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Streamer | LegacyAW FA Roleplay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      min-height: 100vh;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("images/reglement.png") no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-    }
+body{
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at 70% 30%, #ff8c0055, transparent 60%),
+    linear-gradient(to bottom, #140700, #000);
+  color:#fff3e0;
+  min-height:100vh;
+  overflow-x:hidden;
+}
 
-    /* MENU */
-    .top-nav {
-      position: fixed;
-      top: 25px;
-      right: 40px;
-      display: flex;
-      gap: 30px;
-      z-index: 999;
-    }
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:25px 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(20,5,0,0.75);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ff8c0044;
+  z-index:1000;
+}
 
-    .top-nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      opacity: 0.85;
-      transition: 0.2s;
-    }
+nav .logo{
+  font-size:1.6rem;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#ff8c00;
+}
 
-    .top-nav a:hover {
-      opacity: 1;
-      color: #ff8c00;
-    }
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:40px;
+}
 
-    /* CONTENEUR */
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 120px 25px 80px;
-      text-align: center;
-    }
+nav ul a{
+  text-decoration:none;
+  color:#ffd6a3;
+  font-size:0.9rem;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:0.3s;
+}
 
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      background: linear-gradient(90deg, #ff0000, #ff8c00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+nav ul a:hover{
+  color:#ff8c00;
+}
 
-    .subtitle {
-      font-size: 1.2rem;
-      color: #cccccc;
-      margin-bottom: 10px;
-    }
+/* HERO / CONTENU */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:120px 8% 60px;
+  text-align:center;
+}
 
-    .description {
-      font-style: italic;
-      color: #aaaaaa;
-      margin-bottom: 50px;
-    }
+.hero h1{
+  font-size:3rem;
+  margin-bottom:20px;
+  letter-spacing:2px;
+  background: linear-gradient(90deg,#ff8c00,#ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    /* CARDS */
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin-bottom: 50px;
-    }
+.hero .subtitle{
+  font-size:1.2rem;
+  color:#ffb86b;
+  margin-bottom:10px;
+}
 
-    .card {
-      width: 220px;
-      background: rgba(0, 0, 0, 0);
-      border-radius: 18px;
-      padding: 25px 20px;
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      transition: 0.3s;
-      text-align: center;
-    }
+.hero .description{
+  font-style:italic;
+  color:#ffddb3;
+  margin-bottom:40px;
+  max-width:700px;
+}
 
-    .card:hover {
-      transform: translateY(-8px) scale(1.03);
-      border-color: #ff8c00;
-    }
+/* CARDS */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+  margin-bottom:50px;
+}
 
-    .card-name {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: #ffffff;
-    }
+.card{
+  width:220px;
+  background: rgba(0,0,0,0.5);
+  border-radius:18px;
+  padding:25px 20px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition:0.3s;
+  text-align:center;
+}
 
-    .card img.logo {
-      max-width: 120px;
-      margin-bottom: 20px;
-    }
+.card:hover{
+  transform: translateY(-8px) scale(1.03);
+  border-color:#ff8c00;
+}
 
-    .card-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+.card-name{
+  font-size:1.2rem;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#ffb86b;
+}
 
-    .card-links a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      color: #cccccc;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: 0.2s;
-    }
+.card img.logo{
+  max-width:120px;
+  margin-bottom:20px;
+}
 
-    .card-links a img {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
-    }
+.card-links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
 
-    .card-links a:hover {
-      color: #ff8c00;
-    }
+.card-links a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  color:#ffd6a3;
+  text-decoration:none;
+  font-size:0.9rem;
+  transition:0.2s;
+}
 
-    .back-home {
-      margin-top: 30px;
-    }
+.card-links a img{
+  width:20px;
+  height:20px;
+  object-fit:contain;
+}
 
-    .back-home a {
-      color: #5865F2;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: 0.2s;
-    }
+.card-links a:hover{
+  color:#ff8c00;
+}
 
-    .back-home a:hover {
-      opacity: 0.8;
-    }
+/* BOUTON RETOUR */
+.back-home{
+  text-align:center;
+  margin-top:30px;
+}
 
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 0.85rem;
-      padding: 30px 0 20px;
-    }
-  </style>
+.back-home a{
+  display:inline-block;
+  padding:14px 40px;
+  background:linear-gradient(135deg,#ff8c00,#ffb347);
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:2px;
+  border-radius:5px;
+  box-shadow:0 0 25px #ff8c0099;
+  transition:0.3s;
+}
+
+.back-home a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 40px #ffb347;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:0.8rem;
+  color:#c17a2b;
+  padding:20px 0;
+  margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero h1{
+    font-size:2.5rem;
+  }
+
+  .hero .description, .hero .subtitle{
+    font-size:1rem;
+    padding:0 15px;
+  }
+
+  nav{
+    padding:20px 30px;
+  }
+
+  nav ul{
+    gap:20px;
+  }
+
+  .cards{
+    gap:15px;
+  }
+
+  .card{
+    width:180px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <nav class="top-nav">
+<nav>
+  <div class="logo">LegacyAW</div>
+  <ul>
     <a href="index.html">Accueil</a>
     <a href="server.html">Serveur</a>
     <a href="reglements.html">Règlements</a>
     <a href="streamer.html">Streamer</a>
-    <a href="staff.html">Équipe staff</a>
     <a href="boutique.html">Boutique</a>
-  </nav>
+  </ul>
+</nav>
 
-  <div class="container">
-    <h1>Streamer</h1>
-    <p class="subtitle">Informations et privilèges pour les streamers du serveur.</p>
-    <p class="description">Les streamers bénéficient d'avantages exclusifs et d'une visibilité sur nos réseaux officiels.</p>
+<section class="hero">
+  <h1>Streamer</h1>
+  <p class="subtitle">Informations et privilèges pour les streamers du serveur.</p>
+  <p class="description">Les streamers bénéficient d'avantages exclusifs et d'une visibilité sur nos réseaux officiels.</p>
 
-    <div class="cards">
-      <div class="card">
-        <div class="card-name">Legacy AW</div>
-        <img class="logo" src="images/logo.png" alt="LegacyAW">
-        <div class="card-links">
-          <a href="https://www.tiktok.com/@legacyawfa" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg">TikTok
-          </a>
-          <a href="https://www.youtube.com/@Necolos" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">YouTube
-          </a>
-          <a href="https://www.twitch.tv/necolos51" target="_blank">
-            <img src="https://images.seeklogo.com/logo-png/27/2/twitch-logo-png_seeklogo-274042.png">Twitch
-          </a>
-        </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-name">Legacy AW</div>
+      <img class="logo" src="images/logo.png" alt="LegacyAW">
+      <div class="card-links">
+        <a href="https://www.tiktok.com/@legacyawfa" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg">TikTok
+        </a>
+        <a href="https://www.youtube.com/@Necolos" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">YouTube
+        </a>
+        <a href="https://www.twitch.tv/necolos51" target="_blank">
+          <img src="https://images.seeklogo.com/logo-png/27/2/twitch-logo-png_seeklogo-274042.png">Twitch
+        </a>
       </div>
-    </div>
-
-    <div class="back-home">
-      <a href="index.html">← Retour à l'accueil</a>
     </div>
   </div>
 
-  <footer>
-    © 2025 LegacyAW FA RP — Tous droits réservés
-  </footer>
+  <div class="back-home">
+    <a href="index.html">← Retour à l'accueil</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 LegacyAW FA Roleplay — Tous droits réservés
+</footer>
 
 </body>
 </html>
